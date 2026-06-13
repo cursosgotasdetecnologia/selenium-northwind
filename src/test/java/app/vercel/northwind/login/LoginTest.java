@@ -14,7 +14,6 @@ import java.time.Duration;
 public class LoginTest {
     private WebDriver driver;
 
-    private WebDriverWait wait;
     @BeforeEach
     public void setUp() {
         driver = new ChromeDriver();
