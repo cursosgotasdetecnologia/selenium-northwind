@@ -19,7 +19,7 @@ public class LoginTest {
     }
 
     @Test
-    public void testValidarAcessoSemCredenciais() throws Exception {
+    public void testValidarAcessoSemCredenciais()  {
         driver.get("https://northwind-test-platform.vercel.app/");
         driver.findElement(By.name("email")).click();
         driver.findElement(By.name("password")).click();
@@ -30,7 +30,7 @@ public class LoginTest {
     }
 
     @AfterEach
-    public void tearDown() throws Exception {
+    public void tearDown()  {
         //driver.quit();
     }
 }
