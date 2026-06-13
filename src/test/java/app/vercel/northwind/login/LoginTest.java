@@ -4,6 +4,7 @@ import app.vercel.northwind.base.BaseTest;
 import app.vercel.northwind.utils.ScreenshotUtil;
 import app.vercel.northwind.utils.TestData;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +16,7 @@ import java.time.Duration;
 public class LoginTest extends BaseTest{
 
     @Test
+    @DisplayName("Deve exibir erro ao submeter login com campos obrigatórios vazios")
     public void testValidarCamposObrigatoriosVazios() throws IOException {
 
         WebElement inputEmail = driver.findElement(By.name("email"));
@@ -33,6 +35,7 @@ public class LoginTest extends BaseTest{
     }
 
     @Test
+    @DisplayName("Deve exibir erro ao informar email em formato inválido")
     public void testValidarFormatoEmailInvalido() throws IOException {
 
         WebElement inputEmail = driver.findElement(By.name("email"));
@@ -51,6 +54,7 @@ public class LoginTest extends BaseTest{
     }
 
     @Test
+    @DisplayName("Deve exibir erro ao tentar login com usuário não cadastrado")
     public void testValidarUsuarioNaoCadastrado() throws IOException {
 
         WebElement inputEmail = driver.findElement(By.name("email"));
@@ -68,6 +72,7 @@ public class LoginTest extends BaseTest{
     }
 
     @Test
+    @DisplayName("Deve exibir erro ao informar senha incorreta")
     public void testValidarSenhaIncorreta() throws IOException {
         WebElement inputEmail = driver.findElement(By.name("email"));
         WebElement inputPassword =  driver.findElement(By.name("password"));
@@ -84,6 +89,7 @@ public class LoginTest extends BaseTest{
 
     }
     @Test
+    @DisplayName("Deve redirecionar para a página de produtos ao realizar login com sucesso")
     public void testLoginComSucesso() throws IOException {
 
         WebElement email = driver.findElement(By.name("email"));

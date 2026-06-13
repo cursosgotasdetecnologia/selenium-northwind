@@ -76,6 +76,8 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.3.0</version>
         </plugin>
+
+
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.4.2</version>
@@ -100,4 +102,15 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.2.5</version>
+      </plugin>
+    </plugins>
+  </reporting>
+
 </project>
