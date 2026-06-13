@@ -19,15 +19,14 @@ public class BaseTest {
 
         System.setProperty("webdriver.chrome.silentOutput", "true");
         Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
-
-
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(9));
+        driver.get(baseUrl);
     }
 
     @AfterEach
     public void tearDown()  {
-        //driver.quit();
+        driver.quit();
     }
 
 
