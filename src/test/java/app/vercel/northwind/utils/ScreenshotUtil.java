@@ -15,22 +15,12 @@ public class ScreenshotUtil {
 
     public static void capturar(WebDriver driver, String nomeArquivo) throws IOException {
        // String nomeFinal = nomeArquivo + "_" + System.currentTimeMillis();
-
         File origem = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
         Path destino = Paths.get("evidencias", nomeArquivo + ".png");
         //abaixo para nao sobrescrever
         //Path destino = Paths.get("evidencias", nomeFinal + ".png");
-
         destino.toFile().getParentFile().mkdirs();
-
         //Files.copy(origem.toPath(), destino);
         Files.copy(origem.toPath(), destino, java.nio.file.StandardCopyOption.REPLACE_EXISTING);
-
-
-
-
-
-
     }
 }
