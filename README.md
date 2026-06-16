@@ -137,8 +137,7 @@ selenium-northwind/
 │   └── test/
 │       └── java/
 │           └── tests/
-│               ├── BaseTest.java              ← Configuração e reuso (setup/teardown)
-│               ├── BaseTest.java 
+│               ├── BaseTest.java              ← Configuração e reuso (setup/teardown)          
 │               ├── login/
 │               │   └── LoginTest.java         ← Testes de autenticação
 │               ├── produtos/
